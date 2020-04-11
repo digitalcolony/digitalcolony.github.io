@@ -1,8 +1,6 @@
 # digitalcolony.github.io
 
-My GitPages repo.
-
-This is my very first page created using Bootstrap. Isn't it lovely?
+I am now using [MVP.CSS](https://github.com/andybrewer/mvp/) instead of Bootstrap for my GitPage.
 
 ## Some History
 
