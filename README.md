@@ -1,6 +1,6 @@
 # digitalcolony.github.io
 
-I am now using [MVP.CSS](https://github.com/andybrewer/mvp/) instead of Bootstrap for my GitPage.
+For CSS, I am now using tacit instead of Bootstrap or MVP for my GitPage.
 
 ## Some History
 
