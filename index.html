@@ -8,6 +8,32 @@
 		<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
 		<title>Michael Allen Smith (digitalcolony)</title>
 		<link rel="stylesheet" href="mvp.css" />
+		<style>
+			body {
+				font-family: sans-serif;
+				font-size: 1.2rem;
+				line-height: 1.5;
+
+				color: #333;
+				background: linear-gradient(
+						135deg,
+						rgba(180, 215, 255, 0) 50%,
+						rgba(180, 215, 255, 0.3) 50%
+					),
+					linear-gradient(225deg, rgba(180, 215, 255, 0) 50%, rgba(180, 215, 255, 0.3) 50%);
+			}
+			main {
+				background-color: #f5f5f5;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0.4rem 1rem;
+				border-radius: 10px;
+			}
+			.parent {
+				display: flex;
+				justify-content: center;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -23,7 +49,7 @@
 				</p>
 				<p>
 					The technologies I use the most are
-					<mark>SQL, VB.NET, C#, ASP.NET, JavaScript, PHP, and WordPress</mark>.
+					<mark>SQL, VB.NET, C#, Blazor, ASP.NET, JavaScript, Astro, and WordPress</mark>.
 				</p>
 				<ul>
 					<li>
@@ -35,7 +61,9 @@
 						>
 					</li>
 				</ul>
-				<h2>My websites:</h2>
+				<div class="parent">
+					<h2>My websites</h2>
+				</div>
 				<section>
 					<aside>
 						<h3>
@@ -77,24 +105,21 @@
 					</aside>
 					<aside>
 						<h3>
-							<a href="https://coffeeclub.app" title="12 years of data">CoffeeClub.app</a>
+							<a href="https://cat-trick.netlify.app" title="cats!">Cat Trick</a>
 						</h3>
 						<p>
-							A reporting app for the Coffee Club of Seattle that now uses web scraping to pull data
-							from Meetup.com.
+							This is a fun little project I built using Astro. It is a static website of cats that
+							I meet on my neighborhood walks. It gets the data from a Google Sheet via a Google
+							Form.
 						</p>
 					</aside>
 					<aside>
 						<h3>
 							<a href="https://brewcoffee.app" title="coffee tutorials">BrewCoffee.app</a>
 						</h3>
-						<p>
-							The start of a static website built using Next JS and markdown to host coffee brewing tutorials.
-						</p>
+						<p>I have a few coffee websites. This page is a portal to all of them.</p>
 					</aside>
 				</section>
-
-				
 			</article>
 		</main>
 	</body>
