@@ -2,94 +2,114 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Michael Allen Smith - Full Stack Developer with 20+ years experience in C#, .NET, JavaScript, and React/Astro development."
+		/>
 		<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 		<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-		<title>Michael Allen Smith (digitalcolony)</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+		<title>Michael Allen Smith - Developer Portfolio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
-		<header class="parent">
-			<h1>Michael Allen Smith (digitalcolony)</h1>
-		</header>
-		<main>
-			<article>
-				<p>
-					Welcome to my GitHub landing page. I used the GitPages service provided by GitHub. You can
-					setup a free page as well. Details
-					<a href="https://pages.github.com/">here</a>.
-				</p>
-				<p>
-					The technologies I use the most are SQL, VB.NET, C#, Blazor, ASP.NET, JavaScript, Astro,
-					and WordPress.
-				</p>
-				<ul>
-					<li>
-						<a href="https://github.com/digitalcolony" title="My code on GitHub">GitHub</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/digitalcolony/" title="My LinkedIn profile"
-							>LinkedIn</a
-						>
-					</li>
-				</ul>
-				<div class="parent">
-					<h2>My websites</h2>
+		<div class="main-container">
+			<!-- Header -->
+			<header class="header">
+				<div class="header-content">
+					<h1 class="name">Michael Allen Smith</h1>
+					<p class="title">Full Stack Developer</p>
+					<div class="contact-links">
+						<a href="https://github.com/digitalcolony" target="_blank">GitHub</a>
+						<a href="https://www.linkedin.com/in/digitalcolony/" target="_blank">LinkedIn</a>
+					</div>
 				</div>
-				<section>
-					<aside>
-						<h3>
-							<a href="https://ineedcoffee.com" title="Coffee brewing tutorials and reviews"
-								>INeedCoffee.com</a
-							>
-						</h3>
-						<p>One of the most popular coffee blogs on the Internet. Since 1999.</p>
-					</aside>
-					<aside>
-						<h3>
-							<a href="https://criticalmas.org" title="My non-tech interests">CriticalMAS.org</a>
-						</h3>
-						<p>My personal blog covering a wide range of topics including health and fitness.</p>
-					</aside>
-					<aside>
-						<h3>
-							<a href="https://ecofriendlycoffee.org" title="Coffee on the farm"
-								>EcoFriendlyCoffee.org</a
-							>
-						</h3>
-						<p>A coffee website devoted to science and agriculture.</p>
-					</aside>
-					<aside>
-						<h3>
-							<a href="https://neilrogers.org" title="5,000 hours of recovered audio"
-								>NeilRogers.org</a
-							>
-						</h3>
-						<p>An audio and historical archive for the late Neil Rogers, a radio legend.</p>
-					</aside>
-					<aside>
-						<h3>
-							<a href="https://michaelallensmith.com" title="All my projects"
-								>MichaelAllenSmith.com</a
-							>
-						</h3>
-						<p>My personal portal. You can start here if you like.</p>
-					</aside>
-					<aside>
-						<h3>
-							<a href="https://cat-trick.netlify.app" title="cats!">Cat Trick</a>
-						</h3>
-						<p>
-							This is a fun little project I built using Astro. It is a static website of cats that
-							I meet on my neighborhood walks. It gets the data from a Google Sheet via a Google
-							Form.
-						</p>
-					</aside>
+			</header>
+
+			<!-- Main Content -->
+			<main class="content">
+				<!-- About -->
+				<section class="about">
+					<h2>About</h2>
+					<p>
+						Developer with 20+ years of experience building web applications and maintaining popular
+						websites. I specialize in C#, Blazor, SQL, VB.NET, React, Astro, and JavaScript.
+					</p>
 				</section>
-			</article>
-		</main>
+
+				<!-- Tech Stack -->
+				<section class="tech">
+					<h2>Tech Stack</h2>
+					<div class="tech-grid">
+						<div class="tech-category">
+							<h3>Backend</h3>
+							<ul>
+								<li>C#, Blazor, .NET</li>
+								<li>SQL</li>
+								<li>VB.NET, ASP.NET</li>
+							</ul>
+						</div>
+						<div class="tech-category">
+							<h3>Frontend</h3>
+							<ul>
+								<li>Astro</li>
+								<li>React</li>
+								<li>JavaScript</li>
+								<li>HTML & CSS</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Projects -->
+				<section class="projects">
+					<h2>Projects</h2>
+					<div class="project-grid">
+						<div class="project-card">
+							<h3><a href="https://ineedcoffee.com" target="_blank">INeedCoffee.com</a></h3>
+							<p>Popular coffee blog running since 1999. Static Astro site.</p>
+						</div>
+						<div class="project-card">
+							<h3><a href="https://neilrogers.org" target="_blank">NeilRogers.org</a></h3>
+							<p>Radio history project site built in React and Astro with a soundboard.</p>
+						</div>
+						<div class="project-card">
+							<h3><a href="https://criticalmas.org" target="_blank">CriticalMAS.org</a></h3>
+							<p>Personal blog covering health and fitness topics.</p>
+						</div>
+						<div class="project-card">
+							<h3>
+								<a href="https://ecofriendlycoffee.org" target="_blank">EcoFriendlyCoffee.org</a>
+							</h3>
+							<p>Coffee science and sustainability research platform.</p>
+						</div>
+						<div class="project-card">
+							<h3>
+								<a href="https://michaelallensmith.com" target="_blank">MichaelAllenSmith.com</a>
+							</h3>
+							<p>Personal portfolio and project hub.</p>
+						</div>
+						<div class="project-card">
+							<h3>
+								<a href="https://potatohack.com" target="_blank">PotatoHack.com</a>
+							</h3>
+							<p>Portal for the Potato Hack diet. Includes fitness calculators.</p>
+						</div>
+						<div class="project-card">
+							<h3><a href="https://cat-trick.netlify.app" target="_blank">Cat Trick</a></h3>
+							<p>Fun static site built with Astro, integrated with Google Sheets API.</p>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
 	</body>
 </html>
