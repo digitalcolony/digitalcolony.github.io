@@ -4,11 +4,39 @@
 	box-sizing: border-box;
 }
 
+/* Ohio State theme tokens */
+:root {
+	/* Brand palette */
+	--osu-scarlet: #bb0000;
+	--osu-scarlet-600: #a30000;
+	--osu-scarlet-700: #8b0000;
+	--osu-gray: #54565b; /* Official OSU gray */
+	--osu-gray-600: #666666;
+	--osu-silver: #a7a8aa;
+	--black: #000000;
+	--white: #ffffff;
+
+	/* UI tokens */
+	--bg: #f7f7f8;
+	--surface: #ffffff;
+	--text: #1f2937;
+	--text-muted: #6b7280;
+	--card-border: #e5e7eb;
+	--radius: 12px;
+	--radius-sm: 8px;
+	--shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	--focus-ring: 0 0 0 3px rgba(187, 0, 0, 0.35);
+}
+
 body {
 	font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 	line-height: 1.5;
-	color: #333;
-	background-color: #e2dad3;
+	color: var(--text);
+	background-color: var(--bg);
+	/* subtle playful dot grid using scarlet at very low opacity */
+	background-image: radial-gradient(circle at 0 0, rgba(187, 0, 0, 0.03) 0 2px, transparent 2px),
+		radial-gradient(circle at 20px 20px, rgba(187, 0, 0, 0.03) 0 2px, transparent 2px);
+	background-size: 40px 40px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeSpeed;
@@ -27,10 +55,12 @@ body {
 
 /* Header (Left Sidebar) */
 .header {
-	background: white;
-	border-radius: 8px;
+	background: var(--surface);
+	border-radius: var(--radius);
 	padding: 30px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--shadow);
+	border: 1px solid var(--card-border);
+	border-top: 6px solid var(--osu-scarlet);
 	height: fit-content;
 	position: sticky;
 	top: 20px;
@@ -42,16 +72,17 @@ body {
 
 .name {
 	font-size: 1.8rem;
-	font-weight: 700;
-	color: #2c3e50;
+	font-weight: 800;
+	color: var(--text);
 	margin-bottom: 8px;
+	letter-spacing: 0.2px;
 }
 
 .title {
 	font-size: 1rem;
-	color: #7f8c8d;
+	color: var(--text-muted);
 	margin-bottom: 20px;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .contact-links {
@@ -61,27 +92,38 @@ body {
 }
 
 .contact-links a {
-	color: #3498db;
+	display: inline-block;
+	color: var(--white);
 	text-decoration: none;
-	font-weight: 500;
-	padding: 8px 16px;
-	border: 1px solid #3498db;
-	border-radius: 4px;
-	transition: all 0.3s ease;
-	-webkit-tap-highlight-color: rgba(52, 152, 219, 0.2);
+	font-weight: 600;
+	padding: 10px 16px;
+	border: 1px solid var(--osu-scarlet);
+	background: var(--osu-scarlet);
+	border-radius: 999px;
+	transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+	-webkit-tap-highlight-color: rgba(187, 0, 0, 0.2);
 }
 
 .contact-links a:hover {
-	background: #3498db;
-	color: white;
+	background: var(--osu-scarlet-600);
+}
+
+.contact-links a:active {
+	transform: translateY(1px);
+}
+
+.contact-links a:focus-visible {
+	outline: none;
+	box-shadow: var(--focus-ring);
 }
 
 /* Main Content */
 .content {
-	background: white;
-	border-radius: 8px;
+	background: var(--surface);
+	border-radius: var(--radius);
 	padding: 30px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--shadow);
+	border: 1px solid var(--card-border);
 	display: grid;
 	grid-template-rows: auto auto 1fr;
 	gap: 30px;
@@ -95,18 +137,18 @@ section {
 
 h2 {
 	font-size: 1.4rem;
-	font-weight: 600;
-	color: #2c3e50;
+	font-weight: 800;
+	color: var(--text);
 	margin-bottom: 15px;
-	border-bottom: 2px solid #ecf0f1;
-	padding-bottom: 5px;
+	border-bottom: 3px solid var(--osu-scarlet);
+	padding-bottom: 6px;
 }
 
 /* About Section */
 .about p {
-	color: #555;
+	color: var(--text);
 	font-size: 0.95rem;
-	line-height: 1.6;
+	line-height: 1.7;
 }
 
 /* Tech Stack */
@@ -118,8 +160,8 @@ h2 {
 
 .tech-category h3 {
 	font-size: 1.1rem;
-	font-weight: 600;
-	color: #34495e;
+	font-weight: 700;
+	color: var(--osu-gray);
 	margin-bottom: 10px;
 }
 
@@ -129,9 +171,9 @@ h2 {
 
 .tech-category li {
 	padding: 6px 0;
-	color: #555;
+	color: var(--text);
 	font-size: 0.9rem;
-	border-bottom: 1px solid #ecf0f1;
+	border-bottom: 1px dashed var(--card-border);
 }
 
 .tech-category li:last-child {
@@ -146,17 +188,18 @@ h2 {
 }
 
 .project-card {
-	background: #f8f9fa;
-	border: 1px solid #e9ecef;
-	border-radius: 6px;
+	background: var(--surface);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-sm);
 	padding: 18px;
-	transition: all 0.3s ease;
+	transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	transform: translateY(-2px);
+	box-shadow: var(--shadow);
+	transform: translateY(-4px);
+	border-color: var(--osu-scarlet);
 }
 
 .project-card:active {
@@ -169,20 +212,20 @@ h2 {
 }
 
 .project-card h3 a {
-	color: #2c3e50;
+	color: var(--text);
 	text-decoration: none;
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .project-card h3 a:hover {
-	color: #3498db;
+	color: var(--osu-scarlet);
 }
 
 .project-card p {
-	color: #666;
-	font-size: 0.85rem;
-	line-height: 1.5;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	line-height: 1.6;
 }
 
 /* Responsive Design */
@@ -285,7 +328,7 @@ h2 {
 
 	.header {
 		padding: 20px;
-		border-radius: 6px;
+		border-radius: var(--radius-sm);
 	}
 
 	.name {
@@ -312,7 +355,7 @@ h2 {
 	.content {
 		padding: 18px;
 		gap: 20px;
-		border-radius: 6px;
+		border-radius: var(--radius-sm);
 	}
 
 	h2 {
@@ -1064,14 +1107,15 @@ h2 {
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #1a1a1a;
+		background-color: #121212;
 		color: #e1e1e1;
 	}
 
 	.header,
 	.content {
-		background: #2d2d2d;
+		background: #1e1e1e;
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+		border-color: #2a2a2a;
 	}
 
 	.name {
@@ -1084,7 +1128,7 @@ h2 {
 
 	h2 {
 		color: #ffffff;
-		border-bottom-color: #404040;
+		border-bottom-color: var(--osu-scarlet);
 	}
 
 	.about p {
@@ -1097,12 +1141,12 @@ h2 {
 
 	.tech-category li {
 		color: #c0c0c0;
-		border-bottom-color: #404040;
+		border-bottom-color: #2a2a2a;
 	}
 
 	.project-card {
-		background: #383838;
-		border-color: #505050;
+		background: #232323;
+		border-color: #2a2a2a;
 	}
 
 	.project-card:hover {
@@ -1114,7 +1158,7 @@ h2 {
 	}
 
 	.project-card h3 a:hover {
-		color: #5dade2;
+		color: var(--osu-scarlet);
 	}
 
 	.project-card p {
@@ -1122,21 +1166,24 @@ h2 {
 	}
 
 	.contact-links a {
-		color: #5dade2;
-		border-color: #5dade2;
+		color: var(--white);
+		border-color: var(--osu-scarlet);
+		background: var(--osu-scarlet);
 	}
 
 	.contact-links a:hover {
-		background: #5dade2;
-		color: #1a1a1a;
+		background: var(--osu-scarlet-600);
+		color: var(--white);
 	}
 
 	.contact-links a:focus {
-		outline-color: #5dade2;
+		outline: none;
+		box-shadow: var(--focus-ring);
 	}
 
 	.project-card h3 a:focus {
-		outline-color: #5dade2;
+		outline: none;
+		box-shadow: var(--focus-ring);
 	}
 }
 
